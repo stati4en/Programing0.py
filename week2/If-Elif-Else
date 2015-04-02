@@ -1,0 +1,82 @@
+legal.py
+
+n = input("Your age?")
+if(int(n) > 21):
+     print("You are legal here")
+elif(int(n) <  21):
+     print("You are illegal here") 
+
+
+dice_game.py
+
+from random import randint
+n = input("Enter dice sides: ")
+first_name = input("First player name?")
+second_name = input("Second player name?")
+dice = randint(1, int(n))
+print(first_name , "rolls" , dice)
+dice1 = randint(1,int(n))
+print(second_name, "rolls" , dice1)
+if (int(dice) > int(dice1)):
+     print(first_name , "wins!")
+elif(int(dice) < int(dice1)):
+     print(second_name, "wins!")
+elif(int(dice) == int(dice)):
+     print("It's a Draw ")
+
+
+
+
+calculator.py
+
+a = input("First number : ")
+b = input("Second number : ")
+opperation = input("Opperation from '+' , '-' ,'*' and '/' :")
+if( opperation == '+'):
+     print("Result is :")
+     print( int(a) + int(b))
+elif(opperation == '-'):
+     print("Result is:")
+     print( int(a) - int(b))
+elif(opperation == '*'):
+     print("Result is : ")
+     print(int(a) * int(b))
+elif(opperation == '/'):
+     print("Result is :")
+     print(int(a) / int(b))
+else:
+     print("We do not support that operation.")
+
+
+compare.py
+
+a = input("Enter a: ")
+b = input("Enter b: ")
+if( int(a) > int(b)):
+     print("print a(" , a , ") is bigger then b( ", b, ")" )
+elif( int(a) < int(b)):
+     print("print b(" , b , ") is bigger then a( ", a, ")" )
+elif (int(a) == int(b)):
+     print("print a(" , a , ") is equal to  b( ", b, ")" )
+
+evenodd.py
+
+n = input("Enter number: ")
+if int(n) % 2 == 0:
+     print( n  , " is even" )
+else:
+     print( n , "is odd")
+
+
+friday.py
+
+import time
+
+today = time.strftime("%A")
+
+print(today)
+if today == "Friday" :
+     print("It is FRIDAY!! YEAA")
+else:
+     print("It is not ;( Friday , Today is " , today)
+print (time.strftime("%H:%M:%S"))
