@@ -1,0 +1,61 @@
+evenover20.py
+
+number = input("Say a number to see is it even and bigger then 20 : ")
+if int(number) > 20 and int(number) % 2 == 0:
+     print("Yes it is!")
+else:
+     print("No it isn't") 
+
+
+in_interval.py
+
+a = input("Set the lower bound of the interval : ")
+b = input("Set the upper bound of the interval : ")
+x = input("Enter your number x = ")
+
+if int(x) == int(a) :
+     print("The number is equal to the lower bound of the interval")
+elif int(x) == int(b):
+     print("The number is equal to the upper bound of the interval")
+elif int(x) > int(a) and int(x) < int(b) :
+     print("The number is in the interval")
+elif int(x) < int(a):
+     print("The number is outside the interval , x < a")
+elif int(x) > int(b):
+     print("The number is outside the interval, x > b")
+
+
+
+grader.py
+
+s = input("Оценка на тест:")
+if 0 <= int(s) <= 50 :
+     print("Оценка : Слаб 2")
+elif 51 < int(s) <= 60 :
+     print("Оценка : Среден 3" )
+elif 61 < int(s) <= 70 :
+     print("Оценка : Добър 4" )
+elif 71 < int(s) <= 80 :
+     print("Оценка : Много Добър 5 " )
+elif 81 < int(s) <= 99 :
+     print("Оценка : Отличен 6" )
+elif 100 == int(s) :
+     print("Оценка : Много Отличен 7" )
+     
+
+simple_answers.py
+
+while True: 
+     text = input("Say something : ")
+
+
+     if "hello" in text or "Hello" in text :
+          print("Hello there, good stranger! How are you today? ")
+
+     elif "how are you?" in text :
+          print("I am fine, thanks. How are you?") 
+     elif  "feelings" in text :
+          print("I am a machine. I have no feelings")
+     elif "age" in text :
+          print( "I have no age. Only current timestamp")
+
