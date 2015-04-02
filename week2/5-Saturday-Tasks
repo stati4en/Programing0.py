@@ -1,0 +1,246 @@
+1_to_n_by_2.py
+n = input("Enter number : ")
+n = int(n)
+counter = 1
+while counter <= n :
+     print (counter)
+     counter = counter + 2 
+
+
+sum_of_evens.py
+n = input("Enter number : ")
+n = int(n)
+counter = 2
+sum = 0
+if n % 2 == 0:
+     print("n is even")
+while counter <= n :
+     sum = sum + counter
+     counter = counter + 2
+print(sum)
+
+
+
+sum_of_odds.py
+n = input("Enter number : ")
+n = int(n)
+counter = 1
+sum = 0
+if n % 2 == 1:
+     print("n is odd")
+while counter <= n :
+     sum = sum + counter
+     counter = counter + 2
+print(sum)
+
+
+
+bigger_last_digit.py
+n = input( " enter n : ")
+m = input(" enter m : ")
+n = int(n)
+m = int(m)
+
+if n % 2 > m % 2:
+     print( "last diggit on n is bigger ", n)
+elif m % 2 > n % 2:
+     print( "Last diggit on m is bigger : " , m )
+elif m % 2 == n % 2 :
+     if m < n :
+          print( n , "is bigger")
+     elif m > n :
+          print( m , "is bigger")
+
+
+
+
+print_digits.py
+n = input("Enter number : ")
+n = float(n)
+while n!= 0 :
+     print(n%10)
+     n = n//10
+
+
+
+sum_digits.py
+n = input("Enter n: ")
+n = int(n)
+sum = 0
+while n != 0 :
+     sum = n%10 + sum
+     n = n//10
+print( sum)
+
+
+
+sum_digits_interval.py
+N = input( "N :")
+M = input("M : ")
+N = int(N)
+M = int(M)
+sum = 0
+
+if N > M:
+     n = M
+     while n <= N :
+          sum = n%10 + sum
+          print("Sum of digits of ", n , "=" , sum)
+          n = n +1
+          sum = 0
+          a = n//10
+          if a != 0:
+               sum = sum + a
+          else:
+               sum = 0
+elif N < M:
+     n = N
+     while n <= M :
+          sum = n%10 + sum
+          print("Sum of digits of ", n , "=" , sum)
+          n = n +1
+          sum = 0
+          a = n//10
+          if a != 0:
+               sum = sum + a
+          else:
+               sum = 0             
+               
+
+
+
+3_digits.py
+a = input("Enter a:")
+b = input("Enter b:")
+c= input("Enter c: ")
+print( a +  b + c)
+
+
+
+largest_3_digits.py
+n = input("Enter a number : ")
+n = int(n)
+a = n%10
+n = n//10
+b = n%10
+n = n//10
+c = n%10
+if a > b and a > c :
+     if b > c :
+          print( a,b,c)
+     else :
+          print ( a,c,b)
+elif b > c and b > a :
+     if a > c :
+          print( b,a,c )
+     else :
+          print(b,c,a)
+elif c > b and c > a :
+     if a > b :
+          print( c,a,b)
+     else :
+          print (c,b,a)
+          
+
+
+
+reverse_int.py
+n = input( "enter n: ")
+n = int(n)
+new = ""
+if n%10 == 0:
+     n = n //10
+while n!=0 :
+     a = n %10
+     new = new + str(a)
+     n= n//10
+print(new)
+
+
+
+is_prime.py
+num = int(input("Enter a number: "))
+if num > 1:
+    
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(i,"times",num//i,"is",num)
+           break
+       else:
+           print(num,"is a prime number")
+else:
+   print(num,"is not a prime number")
+
+
+
+
+factorial.py
+num = int(input("Enter a number: "))
+factorial =  1
+if num < 0:
+   print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+   print("The factorial of 0 is 1")
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print(factorial)
+
+
+
+dice_1001.py
+from random import randint
+score_maria = 1001
+score_ivan = 1001
+dice_throws_maria = 0
+dice_throws_ivan = 0
+sum_maria = 0
+sum_ivan = 0
+while (score_maria!=0)and (score_ivan != 0):
+    if score_maria>0:
+        while dice_throws_maria<=6:
+            n = randint (1,6)
+            dice_throws_maria = dice_throws_maria + 1
+            sum_maria = sum_maria + n
+        score_maria = score_maria - sum_maria
+        sum_maria = 0
+        dice_throws_maria = 0
+        print ("Maria: ", score_maria)
+    elif score_maria<0:
+        while dice_throws_maria<=6:
+            n = randint (1,6)
+            dice_throws_maria = dice_throws_maria + 1
+            sum_maria = sum_maria + n
+        score_maria = score_maria + sum_maria
+        sum_maria = 0
+        dice_throws_maria = 0
+        print ("Maria: ", score_maria)
+
+        
+    if score_ivan>0:
+        while dice_throws_ivan<=6:
+            n = randint (1,6)
+            dice_throws_ivan = dice_throws_ivan + 1
+            sum_ivan = sum_ivan + n
+        score_ivan = score_ivan - sum_ivan
+        sum_ivan = 0
+        dice_throws_ivan = 0
+        print ("Ivan: ", score_ivan)
+        print ()
+    elif score_ivan<0:
+        while dice_throws_ivan<=6:
+            n = randint (1,6)
+            dice_throws_ivan = dice_throws_ivan + 1
+            sum_ivan = sum_ivan + n
+        score_ivan = score_ivan + sum_ivan
+        sum_ivan = 0
+        dice_throws_ivan = 0
+        print ("Ivan: ", score_ivan)
+        print ()
+
+if score_maria == 0:
+    print ("Maria wins!")
+elif score_ivan == 0:
+    print ("Ivan wins!")
+    
