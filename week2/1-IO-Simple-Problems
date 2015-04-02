@@ -1,0 +1,30 @@
+names.py
+
+first_name = input("First name ? - ")
+second_name = input("Second name ? - ")
+third_name = input("Third name ? - ")
+print (first_name, " ",second_name, " ", third_name)
+
+
+n_dice.py
+
+from random import randint
+n = input("how much sides does the dice have? ")
+dice = randint(1, int(n))
+print("I have thrown the dice of destiny. Here is the result")
+print(dice)
+
+n_dice_more.py
+
+from random import randint
+
+n = input("Enter sides of dice : ")
+n = int(n)
+dice = randint(1,n)
+print("First roll: ", dice)
+dice1 = randint(1,n)
+print("Second roll: ",dice1)
+dice2= randint(1,n)
+print("Third roll : " , dice2)
+
+print("Sum of all the rolls is : " , dice + dice1 + dice2)
