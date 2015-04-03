@@ -1,0 +1,43 @@
+Задача 1 - Създаване на списъци на ръка
+
+list = [1]
+list1 = [1,2,3]
+empty_list = []
+bool_list = [2>1 , 3>2, 3>1]
+str_list = ["Python","Django"]
+names_list = ["Hristo","Dimitrov","Hristov"]
+friends_list = ["Deyan","Moni","Rali","Elena","Gena"]
+language_list = ["Python","C++","HTML","C#","JavaScript","Ruby"]
+
+Задача 2 - Добавяне на елементи към списък
+
+languages = ["Python", "Ruby"]
+
+languages += ["C++", "Java","C#"]
+languages = ["Haskell"] + languages
+languages += ["Go"]
+
+print(languages[0]) #Първият елемент на спписъка
+print(languages[1]) #Връщат втория елемент на списъка
+print(languages[4]) #Връщат петия елемент на списъка
+languages[5] = "F#" #Променят елемента със стойност "C#" с нова стойност - F#
+['Haskell', 'Python', 'Ruby', 'C++', 'Java', 'F#', 'Go']
+languages[len(languages)-1] #Връщат последния елемент на списъка. Може ли да решите това чрез функцията len ?
+
+Задача 3 - Сливане на списъци
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [1]
+d = [8, 8, 10]
+#Сливат всичи списъци, като крайният резултат трябва да е 
+c + b + a + d = [1, 4, 5, 6, 1, 2, 3, 8, 8, 10]
+#Сливат списъците a с b
+a + b 
+[1,2,3,4,5,6]
+#Сливат списъците c с d
+c + d
+[1,8,8,10]
+#Сливат списъка a с a
+a + a
+[1,2,3,1,2,3]
