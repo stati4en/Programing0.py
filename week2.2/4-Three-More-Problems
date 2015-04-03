@@ -1,0 +1,30 @@
+Задача 2 - От число в списък от цифри. И после обратното.
+digits.py
+n = input("Enter number n : ")
+n = int(n)
+digits= []
+a = '' 
+while n!= 0:
+     digit = n%10
+     digit = int(digit)
+     digits =  [digit] + digits
+     n = n//10
+print(" List of digits is:",digits)
+
+n = 0
+for digit in digits:
+     n = n*10 + digit
+print("Number is:",n)
+
+
+Задача 3 - Брой на срещанията на гласните букви в низ.
+
+count_voewls.py
+
+string = input("Enter sentence : ")
+counter = 0
+vowels = "aeiouyAEIOUY"
+for ch in string:
+     if ch in vowels:
+          counter += 1
+print(counter)
