@@ -1,0 +1,110 @@
+Задача 1 - Списък от всички делители на едно число.
+divisors.py
+
+n = input("Enter n: ")
+n = int(n)
+
+divisors = []
+divisor = 1
+
+while divisor != n :
+     if n%divisor == 0:
+          divisors = divisors + [divisor]
+     divisor += 1
+print(divisors)
+
+Задача 2 - Сумата на всички делитети на едно число
+sum_divisors.py
+
+n = input("Enter n: ")
+n = int(n)
+sum = 0
+divisors = []
+divisor = 1
+while divisor != n:
+     if n%divisor == 0:
+          sum = divisor + sum
+          divisors = divisors + [divisor]
+     divisor += 1
+print(divisors)
+print("Theyr sum",sum)
+
+
+Задача 3 - Дали едно число е перфектно
+is_perfect.py
+
+n = input("Enter n: ")
+n = int(n)
+sum = 0
+divisors = []
+divisor = 1
+while divisor != n:
+     if n%divisor == 0:
+          sum = divisor + sum
+          divisors = divisors + [divisor]
+     divisor += 1
+if sum == n :
+     print("Is perfect")
+else :
+     print("is not perfect")
+
+
+Задача 4 - Първите n на брой перфектни числа.
+first_n_perfect.py
+
+n = input("Enter n: ")
+n = int(n)
+start = 6
+
+while True:
+    divisors_sum = 0
+    divisor = 1
+    while divisor < start:
+        if start % divisor == 0:
+            divisors_sum += divisor
+        divisor += 1
+    if divisors_sum == start:
+        print(start)
+        n = n - 1
+    if n == 0:
+        break
+    start += 1
+
+
+Задача 5 - Има ли проста цифра в число?
+prime_digit.py
+
+n = input("Enter n : ")
+n = int(n)
+
+digits = []
+while n != 0:
+     digit = n % 10
+     digits = [digit] + digits
+     n = n//10
+
+has_prime_digit = False
+for digit in digits :
+     if digit in [2,3,5,7]:
+          has_prime_digit = True
+          break
+
+if has_prime_digit:
+     print("At least one prime digit found")
+else :
+     print("No prime digit found")
+
+
+Задача 6 - Прости близнаци
+twin_prime.py
+
+def is_prime(n):
+   start = 2
+   is_prime = True
+
+   while start < n :
+      if n % start == 0 :
+         is_prime = False
+         break
+      start += 1
+   print(n, is_prime)   
