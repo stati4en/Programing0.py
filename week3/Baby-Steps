@@ -1,0 +1,33 @@
+def square(x):
+     return x**2
+
+def fact(x):
+     start = 1
+     sum = 1
+     while start <= x:
+          sum = sum*start
+          start += 1 
+     return sum
+
+def count_elements(items):
+     counter = 0
+     for elements in items:
+          counter += 1
+     return counter
+
+def member(x, xs):
+     a = False
+     for item in xs:
+          if x == item:
+               a = True
+     return a
+ь
+n = input("Enter n: ")
+n = int(n)
+
+square_n = square(n)
+fact_n = fact(n)
+print("Square of n is : ",square_n)
+print("Factorial of n is : ", fact_n)
+print(count_elements([1,2,3,4,5,6,7,8,9,10]))
+print(member(5,[1,2,4,6]))
