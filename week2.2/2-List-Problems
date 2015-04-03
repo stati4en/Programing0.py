@@ -1,0 +1,43 @@
+Задача 1 - Обхождане на списък.
+
+while_traverse.py
+
+books = ["Learn You a Haskell", "The Healthy Programmer","Code Complete","The Pragmatic Programmer","Pro Git","Introduction to Algorithms","Concrete Mathematics"]
+a = 0
+
+while a < len(books) :
+     print(books[a])
+     a = 1 + a 
+
+for_traverse.py
+
+books = ["Learn You a Haskell", "The Healthy Programmer","Code Complete","The Pragmatic Programmer","Pro Git","Introduction to Algorithms","Concrete Mathematics"]
+
+for book in books:
+     print(book)
+
+
+Задача 2 - Четене на променлив брой вход от потребителя.
+read_n_numbers.py
+
+n = input("Enter count of numbers: ")
+n = int(n)
+
+count = 1
+numbers = []
+
+while count <= n:
+    number = input("Enter number: ")
+    number = int(number)
+
+    numbers = numbers + [number]
+
+    count += 1
+
+print(numbers)
+
+Задача 3 - Броят на четните числа от всички въведени от потребителя.
+
+only_evens.py
+
+
