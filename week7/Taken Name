@@ -1,0 +1,14 @@
+def taken_name(name1, name2):
+    name1 = name1 + "a"
+    n = len(name1)
+    new_string = "" 
+    for i in range (len(name2)-n,len(name2)):
+        new_string += name2[i]
+    if name1 == new_string: 
+        return True
+
+    return False
+
+print(taken_name("Petrov", "Petrova"))
+print(taken_name("Petrov", "Ivanova-Petrova"))
+print(taken_name("Ivanov", "Tsvetanova"))
