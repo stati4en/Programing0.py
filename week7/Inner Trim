@@ -1,0 +1,19 @@
+def inner_trim(string):
+    new_string = "" 
+    space = "     "
+    counter = 0
+    a = string
+    for ch in a.strip():
+        if ch in space:
+            counter += 1
+            if counter > 1:
+                new_string += " "
+        else:
+            new_string += ch
+
+
+
+
+    return new_string
+
+print(inner_trim("   Python  Django  "))
