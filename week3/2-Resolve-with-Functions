@@ -1,0 +1,115 @@
+def divisors(n):
+    result = []
+    start = 1
+    end = n - 1
+    while start <= end:
+        if n % start == 0:
+            result += [start]
+
+        start += 1
+    return result
+
+print(divisors(6))
+
+def sum_ints(numbers):
+    result = 0
+
+    for number in numbers:
+        result += number
+
+    return result
+
+print(sum_ints(divisors(6)))
+
+
+def is_perfect(n):
+    return sum_ints(divisors(n)) == n 
+
+print(is_perfect(6))
+
+def first_n_perfect(n):
+
+    start = 6
+    while True:
+        if is_perfect(start):
+            print(start)
+            n = n - 1
+        if n == 0:
+            break
+        start += 1
+
+
+print(first_n_perfect(3))
+
+
+def is_prime(n):
+    if n <= 1:
+        return False
+
+    is_prime = True
+
+    start = 2
+
+    while start < n:
+        if n % start == 0:
+            is_prime = False
+            break
+        
+        start += 1
+    
+    return is_prime
+
+def to_digits(n):
+    result = []
+    
+    while n != 0:
+        digit = n % 10
+        
+        result = [digit] + result
+
+        n = n // 10
+
+    return result
+
+def prime_digit(n):
+    digits = to_digits(n)
+
+    prime_digit = False
+
+    for digit in digits:
+        if is_prime(digit):
+            prime_digit = True
+            break
+
+    if prime_digit == True:
+        prime_digit = "There are prime digits!"
+    else:
+        prime_digit = "There are no prime digits!"
+
+    return prime_digit
+
+
+print(prime_digit(123))
+
+
+def twin_prime(p):
+    q = p - 2
+    r = p + 2
+
+    is_p_prime = is_prime(p)
+    is_q_prime = is_prime(q)
+    is_r_prime = is_prime(r)
+
+    if is_p_prime and (not is_q_prime) and (not is_r_prime):
+        print(str(p) + " is prime")
+        print("But " + str(q) + " and " + str(r) + " are not.")
+    elif is_p_prime:
+        if is_q_prime:
+            print(q, p)
+        if is_r_prime:
+            print(p, r)
+    else:
+        print(str(p) + " is not prime.")
+
+print(twin_prime(5))
+
