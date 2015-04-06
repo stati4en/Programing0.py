@@ -1,0 +1,31 @@
+def forecast(days):
+    snow = 0
+    rain = 0
+    sunshine = 0
+    snow1 = "Tomorrow is gonna snow"
+    rain1 = "Tomorrow is gonna rain"
+    sunshine1 = "Tomorrow is gonna sunshine"
+    for index in range(0 , len(days)):
+        if days[index] == "snow" :
+            snow += 1 
+        elif days[index] == "rain":
+            rain += 1
+        elif days[index] == "sunshine" :
+            sunshine += 1
+
+            if snow == 0:
+                return snow1
+            elif rain == 0:
+                return rain1
+            elif sunshine == 0:
+                return sunshine1
+            elif snow > rain and snow > sunshine :
+                return snow1
+            elif rain > snow and rain > sunshine:
+                return rain1
+            elif sunshine > rain and sunshine > snow:
+                return sunshine1
+            elif snow == rain and rain == sunshine:
+                print("Tommorow is gonna", days[index])
+ 
+print(forecast(["rain", "rain","snow", "snow", "sunshine", "sunshine"]))
