@@ -1,0 +1,17 @@
+def fib(num):
+     num1 = 1
+     num2 = 1
+     limit = 2
+     fib_list = [ 1, 1]
+     while limit != num :
+          result = num1 + num2
+          num2 = num1
+          num1 = result
+          fib_list += [result]
+          limit += 1
+          
+     return fib_list
+
+
+
+     
