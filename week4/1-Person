@@ -1,0 +1,14 @@
+first_name = input("Enter first name : ")
+second_name = input("Enter second name : ")
+third_name = input("Enter third name : ")
+birth_year = int(input("Enter birth year : "))
+current_age = 2014 - birth_year
+aa1 = {}
+
+
+aa1["first_name"] = first_name
+aa1["middle_name"] = middle_name
+aa1["last_name"] = last_name
+aa1["birth_year"] = birth_year
+aa1["age"] = 2015 - birth_year
+print(aa1)
