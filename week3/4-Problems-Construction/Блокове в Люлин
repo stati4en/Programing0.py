@@ -1,0 +1,28 @@
+lulin_city.py
+bloks = input("Enter the n : ")
+bloks = int(bloks)
+list_of_hights = []
+start = 1
+
+while start <= bloks :
+     bloks_hights = input("Enter the n hights: ")
+     bloks_hights = int(bloks_hights)
+
+     list_of_hights += [bloks_hights]
+
+     start += 1
+
+print(list_of_hights)
+
+index = 1
+max_high = list_of_hights[0]
+counter = 1
+
+while index < bloks:
+     if max_high < list_of_hights[index]:
+          max_high = list_of_hights[index]
+          counter += 1
+
+     index += 1
+
+print(counter)
