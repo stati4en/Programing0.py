@@ -1,0 +1,16 @@
+def max_score(beers,fries):
+
+     n_beers = sorted(beers)
+     n_fries = sorted(fries)
+     i = 0
+
+     score = 0
+
+     while i < len(beers):
+
+          score += n_beers[i] * n_fries[i]
+          i += 1
+
+     return score
+
+print(max_score([10, 11], [1, 5]))
