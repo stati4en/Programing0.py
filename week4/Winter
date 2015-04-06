@@ -1,0 +1,15 @@
+def winter_is_coming(seasons):
+     
+     counter = 0
+     for index_x in range(0,len(seasons)):
+          if index_x == "spring
+          ":
+               counter += 1
+
+          else:
+               counter = 0
+
+          if counter == 5 :
+               print("Winter is coming")
+               break
+     
