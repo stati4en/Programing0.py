@@ -1,0 +1,16 @@
+def count_zero_neighbours(numbers):
+    count = 0
+    index = 0
+    result = []
+    for number in numbers:
+        if index < len(numbers) - 1:
+            neighbour = numbers[index + 1]
+
+            if number + neighbour == 0:
+                count += 1
+                result += [number,neighbour]
+        index += 1
+
+    return "Neighbours Count : " , count,result 
+
+print(count_zero_neighbours([2,-2,0,1,0,0,10,-10]))
