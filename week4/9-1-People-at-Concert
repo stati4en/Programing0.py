@@ -1,0 +1,8 @@
+def get_people_count(people):
+    result = []
+    
+    for person in people:
+        if person not in result:
+            result += [person]
+
+    return len(result)
