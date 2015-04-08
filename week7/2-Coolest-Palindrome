@@ -1,0 +1,19 @@
+def is_string_palindrom(string):
+    alfa = "aeiouyAEIOUYbcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ1234567890"
+
+    new_string = ""
+    new_reverse_string = "" 
+    for ch in string:
+        if ch in alfa:
+            new_reverse_string = ch + new_reverse_string
+            new_string += ch
+
+    new_reverse_string = new_reverse_string.lower()
+    new_string = new_string.lower()
+    if new_reverse_string == new_string:
+        return True
+
+    return False
+
+print(is_string_palindrom("Az obi4am ma4 i boza"))
+print(is_string_palindrom("bozaaa"))
