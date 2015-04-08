@@ -1,0 +1,98 @@
+def reverse(string):
+    result = ""
+    n = len(string)
+
+    for i in range(n -1 ,-1, -1 ):
+        result = result + string[i]
+     return result
+
+print("reverse(python)")
+print(reverse("Python"))
+
+
+def join(delimiter, items):
+    new_string = items[0]
+    for i in range(1,len(items)):
+        new_string = new_string + str(delimiter) + str(items[i])
+
+    return new_string
+
+print("join(new line /n/, [line1, line2])")
+print(join("!!", ["line1", "line2"]))
+
+def startswith(search,string):
+    n = len(search)
+    new_string = "" 
+    for i in range (0,n):
+        new_string += string[i]
+    if search == new_string: 
+        return True
+
+    return False
+
+print("startswith(Py, Python)")
+print(startswith("Py", "Python"))
+
+def endswith(search, string):
+    n = len(search)
+    new_string = "" 
+    for i in range (len(string)-n,len(string)):
+        new_string += string[i]
+    if search == new_string: 
+        return True
+
+    return False
+
+print("endswith(kapak,babakapak")
+print(endswith("kapak","babakapak"))
+
+
+def string_to_char_list(string):
+    result = []
+
+    for ch in string:
+        result = result +[ch]
+
+    return result
+
+print("string_to_char_list(Python)")
+print(string_to_char_list("Python")
+
+def char_list_to_string(char):
+    result = ""
+
+    for ch in char:
+        result += ch
+    return result
+
+print("char_list_to_string(string_to_char_list(Python))")
+print(char_list_to_string(string_to_char_list("Python")))
+
+def reverse(list):
+    result = []
+
+    for item in list:
+        result = [item] + result
+    return result
+
+def str_reverse(string):
+    char_list = string_to_char_list(string)
+    char_list = reverse(char_list)
+
+    return char_list_to_string(char_list)
+
+print(str_reverse("Python"))
+
+def tail(list):
+    y = len(list)
+    result = []
+    for index in range(1,y ):
+        x = list[index]
+        result += [x]
+    print(result)
+
+def trim_left(string):
+    while startswith(" ",string):
+        string = char_list_to_string(tail(string))
+
+    return string
