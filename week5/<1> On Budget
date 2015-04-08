@@ -1,0 +1,22 @@
+def on_budget(books,budget):
+     result = {
+          "books_on_budget" : 0,
+          "loan" : 0
+          }
+     books = sorted(books)
+     total_price = sum(books)
+     for book in books:
+          if budget <= budget :
+               result["books_on_budget"] += 1
+               budget -= book
+               total_price -= book
+
+     result["loan"]  = total_price - budget
+
+     if result["loan"] < 0:
+          result["loan"] = 0
+     return result
+
+             
+               
+               
