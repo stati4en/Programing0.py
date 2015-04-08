@@ -1,0 +1,23 @@
+n = int(input("Enter n: "))
+stars_number = n
+star = "*"
+counter_dots = 0
+dot = "."
+
+while stars_number >= 1:
+    
+    print(counter_dots*dot + star*stars_number + counter_dots*dot)
+    stars_number -= 2
+    counter_dots += 1
+    
+    if stars_number == 1:
+        break
+        
+while stars_number < n + 1:
+    
+    print(counter_dots*dot + star*stars_number + counter_dots*dot)
+    stars_number += 2
+    counter_dots -= 1
+
+    if stars_number == n+1:
+        break
